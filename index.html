@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国铆王王总-FastFix</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .button {
+            font-size: 24px;
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content">
+        <span class="button" onclick="toggleText()">中国铆王王总-FastFix</span>
+    </div>
+
+    <script>
+        let isOriginal = true;  // 用来判断当前显示的内容
+
+        function toggleText() {
+            const contentDiv = document.getElementById('content');
+            
+            if (isOriginal) {
+                contentDiv.innerHTML = '<span class="button" onclick="toggleText()">王总威武王总威武</span>';
+            } else {
+                contentDiv.innerHTML = '<span class="button" onclick="toggleText()">中国铆王王总-FastFix</span>';
+            }
+
+            isOriginal = !isOriginal;  // 切换状态
+        }
+    </script>
+
+</body>
+</html>
